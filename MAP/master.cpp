@@ -50,18 +50,18 @@ int turCal()
 {
 	int sol[N][N];
 
-	for (int i = 0; i < N; i++)
+	for (int i = 0; i < N; i++)//Initializam matricea sol cu -1 pentru a marca ca nici o pozitie nu a fost vizitata inca
 		for (int j = 0; j < N; j++)
 		{
 			sol[i][j] = -1;
 		}
 
-	int iMutare[8] = { 2, 1, -1, -2, -2, -1, 1, 2 };
-	int jMutare[8] = { 1, 2, 2, 1, -1, -2, -2, -1 };
+	int iMutare[8] = { 2, 1, -1, -2, -2, -1, 1, 2 };//Directiile pozibile in directia i
+	int jMutare[8] = { 1, 2, 2, 1, -1, -2, -2, -1 };//Directiile posibile in directia j
 
-	sol[0][0] = 0;
+	sol[0][0] = 0;//Marcam prima pozitie vizitata de catre cal
 
-	if (turCalRec(0, 0, 1, sol, iMutare, jMutare) == 0)
+	if (turCalRec(0, 0, 1, sol, iMutare, jMutare) == 0)//Incepem procesul de backtracking, incepand cu pozitia (0,0) si continuam cu toate posibilitatile
 	{
 		cout << "Solutia nu exista";
 		return 0;
@@ -71,12 +71,12 @@ int turCal()
 		afisare(sol);
 	}
 	
-	return 1;
+	return 1;//Retruneaza 1 pentru a afisa succestul in rezolvarea problemei turul calului
 }
 
 int main()
 {
-	turCal();
+	turCal();//Aceasta apelare va declansa rezolvarea problemei
 
 	return 0;
 }
