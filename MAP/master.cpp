@@ -1,19 +1,20 @@
 #include <iostream>
 #include <iomanip>
+//Bibliotecile de care avem noevoie
 using namespace std;
 #define N 8
 
-int singur(int i, int j, int sol[N][N])
+int singur(int i, int j, int sol[N][N])//Verifica daca pozitia (i,j) este valida si nevizitata
 {
 	return(i >= 0 && i < N && j >= 0 && j < N && sol[i][j] == -1);
 }
 
-void afisare(int sol[N][N])
+void afisare(int sol[N][N])//Functia de afisare
 {
 	for(int i=0;i<N;i++)
 	{
 		for (int j = 0; j < N; j++)
-			cout << " " << setw(2) << sol[i][j] << " ";
+			cout << " " << setw(2) << sol[i][j] << " ";//Folosim setw(2) pentru a rezerva tot timpul 2 spatii pentru a afisa un caracter
 		cout << endl;
 	}
 }
