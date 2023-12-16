@@ -26,7 +26,7 @@ int turCalRec(int i, int j, int mutare, int sol[N][N], int iMutare[8], int jMuta
 		return 1;
 	}
 
-	for (k = 0; j < 8; k++)
+	for (k = 0; k < 8; k++)
 	{
 		Ni = i + iMutare[k];
 		Nj = j + jMutare[k];
@@ -74,6 +74,7 @@ int turCal()
 
 int main()
 {
+	turCal();
 
 	return 0;
 }
