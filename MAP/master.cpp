@@ -44,6 +44,33 @@ int turCalRec(int i, int j, int mutare, int sol[N][N], int iMutare[8], int jMuta
 	return 0;
 }
 
+int turCal()
+{
+	int sol[N][N];
+
+	for (int i = 0; i < N; i++)
+		for (int j = 0; j < N; j++)
+		{
+			sol[i][j] = -1;
+		}
+
+	int iMutare[8] = { 2, 1, -1, -2, -2, -1, 1, 2 };
+	int jMutare[8] = { 1, 2, 2, 1, -1, -2, -2, -1 };
+
+	sol[0][0] = 0;
+
+	if (turCalRec(0, 0, 1, sol, iMutare, jMutare) == 0)
+	{
+		cout << "Solutia nu exista";
+		return 0;
+	}
+	else
+	{
+		afisare(sol);
+	}
+	
+	return 1;
+}
 
 int main()
 {
