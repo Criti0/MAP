@@ -11,10 +11,11 @@ int singur(int i, int j, int sol[N][N])
 void afisare(int sol[N][N])
 {
 	for(int i=0;i<N;i++)
+	{
 		for (int j = 0; j < N; j++)
-		{
-			cout << " " << setw(2) << sol[i][j] << " " << "\n";
-		}
+			cout << " " << setw(2) << sol[i][j] << " ";
+		cout << endl;
+	}
 }
 
 int turCalRec(int i, int j, int mutare, int sol[N][N], int iMutare[8], int jMutare[8])
