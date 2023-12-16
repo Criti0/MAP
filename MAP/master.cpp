@@ -1,6 +1,7 @@
-#include <bits/stdc++.h> 
-using namespace std;
+#include <iostream>
+#include <iomanip>
 #define N 8
+
 
 int main()
 {
